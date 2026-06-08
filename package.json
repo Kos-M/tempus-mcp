@@ -1,0 +1,60 @@
+{
+  "name": "tempus-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Toggl Track - time entries, projects, workspaces, and time slot management",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./cli": {
+      "import": "./dist/cli.js",
+      "types": "./dist/cli.d.ts"
+    }
+  },
+  "bin": {
+    "tempus-mcp": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "toggl",
+    "time-tracking",
+    "model-context-protocol",
+    "tempus"
+  ],
+  "author": "Kos-M",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kos-M/tempus-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kos-M/tempus-mcp/issues"
+  },
+  "homepage": "https://github.com/Kos-M/tempus-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.20",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.6"
+  }
+}

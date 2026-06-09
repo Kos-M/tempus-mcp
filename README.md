@@ -67,6 +67,18 @@ tempus-mcp
 }
 ```
 
+**Opencode / other MCP clients (recommended):**
+If your MCP client does not reliably pass environment variables through `npx`, pass the token directly via CLI arguments:
+```json
+{
+  "mcpServers": {
+    "tempus": {
+      "command": ["npx", "-y", "tempus-mcp", "--token", "your_token_here", "--workspace-id", "12345678"]
+    }
+  }
+}
+```
+
 **Other MCP clients:**
 The server uses stdio transport, compatible with any MCP client.
 

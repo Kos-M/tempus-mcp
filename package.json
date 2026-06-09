@@ -1,6 +1,6 @@
 {
   "name": "tempus-mcp",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "MCP server for Toggl Track - time entries, projects, workspaces, and time slot management",
   "type": "module",
   "main": "./dist/index.js",

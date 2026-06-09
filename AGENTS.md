@@ -39,6 +39,11 @@ MCP server for Toggl Track time tracking.
 - Lint: `npm run lint`
  
 ## Env
-- TOGGL_API_TOKEN: Required
-- TOGGL_BASE_URL: Optional (default: https://api.track.toggl.com/api/v9)
-- TOGGL_DEFAULT_WORKSPACE_ID: Optional
+- TOGGL_API_TOKEN: Required (or pass via --token CLI arg)
+- TOGGL_BASE_URL: Optional (default: https://api.track.toggl.com/api/v9) (or pass via --base-url CLI arg)
+- TOGGL_DEFAULT_WORKSPACE_ID: Optional (or pass via --workspace-id CLI arg)
+
+## CLI Args (alternative to env vars)
+- --token <token>: Equivalent to TOGGL_API_TOKEN (does not override existing env var)
+- --workspace-id <id>: Equivalent to TOGGL_DEFAULT_WORKSPACE_ID
+- --base-url <url>: Equivalent to TOGGL_BASE_URL

@@ -14,6 +14,7 @@ MCP server for Toggl Track time tracking.
   tsconfig.json
   LICENSE
   tests/
+    cli.test.ts
     toggl-client.test.ts
     config.test.ts
   .github/
@@ -39,6 +40,11 @@ MCP server for Toggl Track time tracking.
 - Lint: `npm run lint`
  
 ## Env
-- TOGGL_API_TOKEN: Required
-- TOGGL_BASE_URL: Optional (default: https://api.track.toggl.com/api/v9)
-- TOGGL_DEFAULT_WORKSPACE_ID: Optional
+- TOGGL_API_TOKEN / --token: Required (token or CLI arg)
+- TOGGL_BASE_URL / --base-url: Optional (default: https://api.track.toggl.com/api/v9)
+- TOGGL_DEFAULT_WORKSPACE_ID / --workspace-id: Optional
+
+## CLI Args (alternative to env vars)
+- --token <value>: Sets TOGGL_API_TOKEN (does not override existing env var)
+- --workspace-id <value>: Sets TOGGL_DEFAULT_WORKSPACE_ID
+- --base-url <value>: Sets TOGGL_BASE_URL

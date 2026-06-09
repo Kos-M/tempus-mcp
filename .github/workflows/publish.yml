@@ -20,6 +20,13 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Check NPM_TOKEN is configured
+        run: |
+          if [ -z "${{ secrets.NPM_TOKEN }}" ]; then
+            echo "::error::NPM_TOKEN secret is not configured. Go to https://github.com/Kos-M/tempus-mcp/settings/secrets/actions to add it."
+            exit 1
+          fi
+
       - name: Install dependencies
         run: npm ci
 

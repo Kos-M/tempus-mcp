@@ -104,6 +104,7 @@ export class TogglClient {
       `/workspaces/${workspaceId}/time_entries`,
       {
         ...data,
+        wid: workspaceId,
         created_with: data.created_with || 'tempus-mcp',
       },
     );

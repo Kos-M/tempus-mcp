@@ -105,6 +105,7 @@ export class TogglClient {
       {
         ...data,
         wid: workspaceId,
+        workspace_id: workspaceId,
         created_with: data.created_with || 'tempus-mcp',
       },
     );

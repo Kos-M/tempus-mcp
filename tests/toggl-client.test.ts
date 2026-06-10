@@ -28,7 +28,7 @@ describe('TogglClient', () => {
     expect(client).toBeInstanceOf(TogglClient);
   });
 
-  it('should include wid in createTimeEntry request body', async () => {
+  it('should include wid and workspace_id in createTimeEntry request body', async () => {
     const workspaceId = 12345;
     await client.createTimeEntry(workspaceId, {
       description: 'Test entry',
@@ -41,5 +41,7 @@ describe('TogglClient', () => {
     expect(url).toContain(`/workspaces/${workspaceId}/time_entries`);
     const body = JSON.parse(options?.body as string);
     expect(body.wid).toBe(workspaceId);
+    expect(body.workspace_id).toBe(workspaceId);
+    expect(body.created_with).toBe('tempus-mcp');
   });
 });

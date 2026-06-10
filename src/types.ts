@@ -70,4 +70,6 @@ export interface TimeEntryInput {
   stop?: string;
   duration?: number;
   created_with?: string;
+  /** Workspace ID — required by the Toggl API v9 for time entry creation */
+  wid?: number;
 }
